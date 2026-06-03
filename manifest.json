@@ -1,0 +1,26 @@
+{
+  "name": "Nowshin Layla - Pharmacist",
+  "short_name": "Nowshin Layla",
+  "description": "Personal website of Nowshin Layla, a registered pharmacist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9d87b0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["portfolio", "professional", "health"],
+  "lang": "en",
+  "scope": "/"
+}
