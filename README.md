@@ -38,7 +38,7 @@ Static files are exported to `dist/` for GitHub Pages.
 
 ## Customize
 
-1. **Photo** — Replace `public/prof_pic.png` with a portrait photo.
+1. **Photo** — Replace `public/pro-pic-nowshin.png` with a portrait photo.
 2. **Resume** — Add `public/Nowshin_Layla_Resume.pdf` or set `resumeExternalUrl` in `app/metadata.ts`.
 3. **Bio & education** — Edit `src/About/About.tsx`.
 4. **Experience** — Edit `src/Experience/Experience.tsx`.

@@ -16,7 +16,7 @@ export default function About() {
               <div className={styles.profile}>
                 <figure className={styles.portrait}>
                   <img
-                    src="./prof_pic.png"
+                    src="./pro-pic-nowshin.png"
                     alt="Nowshin Layla - Pharmacist"
                     className={styles.image}
                   />

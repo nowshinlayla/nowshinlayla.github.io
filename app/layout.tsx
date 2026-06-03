@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/prof_pic.png",
+        url: "/pro-pic-nowshin.png",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} - Pharmacist`,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/prof_pic.png"],
+    images: ["/pro-pic-nowshin.png"],
   },
   alternates: {
     canonical: siteConfig.url,

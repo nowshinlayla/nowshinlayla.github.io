@@ -8,11 +8,11 @@ export const siteConfig = {
   description:
     "Personal website of Nowshin Layla, a registered pharmacist dedicated to patient care, medication safety, and community health.",
   url: "https://nowshinlayla.github.io/",
-  ogImage: "https://nowshinlayla.github.io/prof_pic.png",
+  ogImage: "https://nowshinlayla.github.io/pro-pic-nowshin.png",
   links: {
     github: "https://github.com/nowshinlayla",
     linkedin: "https://www.linkedin.com/in/nowshin-layla/",
-    email: "nowshinlayla@gmail.com",
+    email: "nowshinlayla1818@gmail.com",
     facebook: "",
   },
   web3formsAccessKey: "",
