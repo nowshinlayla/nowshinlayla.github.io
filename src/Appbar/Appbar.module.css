@@ -1,0 +1,152 @@
+.appbar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    height: 58px;
+    min-height: 58px !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.appbarContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--layout-width);
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: var(--theme-text);
+    font-weight: 700 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    font-size: 1.6rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo:hover {
+    color: var(--theme-primary);
+    transform: translateY(-2px);
+}
+
+.logo:active {
+    transform: translateY(0px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.listItem {
+    color: var(--theme-text);
+    opacity: 0.9;
+    padding: 8px 10px !important;
+    font-size: 1rem !important;
+    font-weight: 600;
+    margin: 0 5px;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.listItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(var(--theme-primary-rgb), 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.listItem:hover {
+    color: var(--theme-primary) !important;
+    background-color: rgba(var(--theme-primary-rgb), 0.05);
+    transform: translateY(-1px);
+}
+
+.listItem:hover::before {
+    left: 100%;
+}
+
+.listItem:active {
+    transform: translateY(0px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+.listItemActive {
+    color: var(--theme-primary) !important;
+    opacity: 1;
+}
+
+.listItemActive::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: var(--theme-primary);
+    border-radius: 1px;
+}
+
+/* Menu button animations */
+.menuButton {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.menuButton:hover {
+    background-color: rgba(var(--theme-primary-rgb), 0.1);
+    transform: scale(1.1);
+}
+
+.menuButton:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+@media (max-width: 768px) {
+    .appbarContent {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .appbar {
+        height: 52px;
+        min-height: 52px !important;
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+    }
+
+    .list {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .appbarContent {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+  

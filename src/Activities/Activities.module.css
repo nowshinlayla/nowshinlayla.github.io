@@ -1,0 +1,410 @@
+.outer {
+  background: var(--theme-surface);
+  padding: 30px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: var(--layout-width);
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--font-size-section);
+  font-weight: 500;
+  color: var(--theme-text);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  margin-bottom: 12px;
+  color: var(--theme-text-muted);
+  line-height: var(--line-height-snug);
+  max-width: 46rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* Top bar — scrolls horizontally when there are many activities */
+.tabBarWrap {
+  position: relative;
+}
+
+.tabBar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fbfbfb;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.tabBarFill .activityTab {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+}
+
+.tabBarScrollable {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.tabBar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabBar::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 3px;
+}
+
+.tabScrollButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: var(--theme-primary-dark);
+  line-height: 1;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.tabScrollButton:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.45);
+  background: rgba(var(--theme-primary-rgb), 0.08);
+}
+
+.tabScrollLeft {
+  left: 10px;
+}
+
+.tabScrollRight {
+  right: 10px;
+}
+
+.activityTab {
+  flex: 0 0 auto;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+  min-width: 200px;
+  max-width: 280px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.activityTab:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.35);
+  background: rgba(var(--theme-primary-rgb), 0.05);
+}
+
+.activeTab {
+  border-color: rgba(var(--theme-primary-rgb), 0.45);
+  background: rgba(var(--theme-primary-rgb), 0.1);
+}
+
+.tabTitle {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--theme-text);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabDate {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.78rem;
+  color: #777;
+}
+
+/* Full-width content below tabs */
+.activityPanel {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.mediaColumn {
+  min-width: 0;
+}
+
+.mediaColumn:focus {
+  outline: none;
+}
+
+.mediaColumn:focus-visible {
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px rgba(var(--theme-primary-rgb), 0.35);
+}
+
+.carousel {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+.carouselItem {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.carouselImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.carouselControl:hover {
+  opacity: 1;
+}
+
+.carouselControlPrev {
+  left: 0;
+}
+
+.carouselControlPrev:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.28), transparent);
+}
+
+.carouselControlNext {
+  right: 0;
+}
+
+.carouselControlNext:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.28), transparent);
+}
+
+.carouselControlIcon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+.carouselControlPrev .carouselControlIcon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carouselControlNext .carouselControlIcon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.carouselIndicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0 0 12px;
+  list-style: none;
+}
+
+.carouselIndicators li {
+  line-height: 0;
+}
+
+.carouselIndicators button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carouselIndicators button:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.carouselIndicatorActive {
+  background: #fff !important;
+  transform: scale(1.15);
+}
+
+.thumbRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.thumbBtn {
+  flex: 0 0 auto;
+  width: 72px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.activeThumb {
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 1px rgba(var(--theme-primary-rgb), 0.45);
+}
+
+.thumbImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.contentColumn {
+  min-width: 0;
+}
+
+.activityTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 400;
+  color: var(--theme-text);
+  margin: 0 0 6px;
+  line-height: var(--line-height-snug);
+}
+
+.activityDate {
+  font-size: var(--font-size-sm);
+  color: var(--theme-text-muted);
+  margin: 0 0 10px;
+}
+
+.activityDescription {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--theme-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .outer {
+    padding: 25px 15px 15px 15px;
+  }
+
+  .inner {
+    width: 90%;
+  }
+
+  .title {
+    font-size: var(--font-size-section);
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .activityTab {
+    min-width: 180px;
+    max-width: 240px;
+  }
+
+  .activityPanel {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .contentColumn {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .outer {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .inner {
+    width: 95%;
+  }
+
+  .title {
+    font-size: var(--font-size-section);
+  }
+
+  .tabBar {
+    padding: 10px 12px;
+  }
+
+  .tabBarScrollable {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .activityTab {
+    min-width: 160px;
+  }
+}

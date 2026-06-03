@@ -1,0 +1,260 @@
+.outer {
+  background: var(--theme-surface);
+  position: relative;
+  padding: 30px 0 30px 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: var(--layout-width);
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--font-size-section);
+  font-weight: 500;
+  color: var(--theme-text);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Single Card */
+.card {
+  background: white;
+  border-radius: var(--card-radius);
+  padding: 28px 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* Company Group */
+.companyGroup {
+  position: relative;
+}
+
+.divider {
+  height: 1px;
+  background: #e8e8e8;
+  margin: 24px 0;
+}
+
+.companyHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.companyIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyLogo {
+  height: 36px;
+  width: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.companyName {
+  font-size: var(--font-size-subtitle);
+  font-weight: 400;
+  color: var(--theme-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.companyDuration {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--theme-text-muted);
+}
+
+/* Roles Container */
+.rolesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Role Item */
+.roleItem {
+  display: flex;
+  gap: 16px;
+}
+
+.roleConnector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16px;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.roleDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--theme-primary);
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--theme-primary);
+}
+
+.roleLine {
+  width: 2px;
+  flex-grow: 1;
+  background: #d0d7de;
+  margin-top: 4px;
+  min-height: 20px;
+}
+
+.roleContent {
+  flex: 1;
+  padding-bottom: 24px;
+}
+
+.roleItem:last-child .roleContent {
+  padding-bottom: 0;
+}
+
+.roleHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.roleTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 400;
+  color: var(--theme-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.roleDuration {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--theme-text-muted);
+  white-space: nowrap;
+}
+
+.roleDescription {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--theme-text-muted);
+  margin: 0;
+  text-align: left;
+}
+
+.link {
+  color: var(--theme-link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: var(--theme-link-hover);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .outer {
+    padding: 40px 0 40px 0;
+  }
+
+  .inner {
+    width: 90%;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: var(--font-size-section);
+    text-align: center;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .companyName {
+    font-size: 1.05rem;
+  }
+
+  .roleTitle {
+    font-size: 0.98rem;
+  }
+
+  .roleHeader {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .roleDescription {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .outer {
+    padding: 25px 0 25px 0;
+  }
+
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: var(--font-size-section);
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .companyHeader {
+    gap: 10px;
+  }
+
+  .companyName {
+    font-size: 0.98rem;
+  }
+
+  .companyDuration {
+    font-size: 0.82rem;
+  }
+
+  .roleTitle {
+    font-size: 0.92rem;
+  }
+
+  .roleDuration {
+    font-size: 0.82rem;
+  }
+
+  .roleDescription {
+    font-size: 0.88rem;
+  }
+}
