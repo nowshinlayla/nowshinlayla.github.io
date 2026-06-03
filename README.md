@@ -6,6 +6,17 @@ Portfolio website for **Nowshin Layla**, built with Next.js and deployed on GitH
 
 https://nowshinlayla.github.io
 
+### GitHub Pages setup (important)
+
+If you see this README on the live site instead of the portfolio:
+
+1. Open **Settings → Pages** in the repo.
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3. Set **Branch** to **gh-pages** and folder **/ (root)** — not `master`.
+4. Save, wait 1–2 minutes, then refresh the site.
+
+The `Deploy to GitHub Pages` workflow builds the Next.js app and pushes the result to the `gh-pages` branch.
+
 ## Local Development
 
 ```bash
