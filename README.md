@@ -10,12 +10,12 @@ https://nowshinlayla.github.io
 
 If you see this README on the live site instead of the portfolio:
 
-1. Open **Settings → Pages** in the repo.
-2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-3. Set **Branch** to **gh-pages** and folder **/ (root)** — not `master`.
-4. Save, wait 1–2 minutes, then refresh the site.
+1. Open **Settings → Pages** → **Build and deployment**.
+2. Set **Source** to **GitHub Actions** (not “Deploy from a branch” and not `master`).
+3. Push to `master` so the **Deploy to GitHub Pages** workflow runs and finishes green.
+4. Wait 1–2 minutes, then hard-refresh https://nowshinlayla.github.io
 
-The `Deploy to GitHub Pages` workflow builds the Next.js app and pushes the result to the `gh-pages` branch.
+Do not use the auto-added **Next.js** workflow template if it reappears — only `.github/workflows/deploy.yml` should run.
 
 ## Local Development
 
