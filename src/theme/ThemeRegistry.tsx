@@ -22,9 +22,14 @@ const theme = createTheme({
   },
   components: {
     MuiAppBar: {
+      defaultProps: {
+        color: "transparent",
+        elevation: 0,
+      },
       styleOverrides: {
         root: {
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+          boxShadow: "none",
+          color: siteTheme.navText,
         },
       },
     },

@@ -3,22 +3,26 @@
  */
 export const siteTheme = {
   surface: "#f9fafb",
-  text: "#000000",
-  textMuted: "#6c757d",
+  /** Soft plum — not pure black */
+  text: "#4a3f52",
+  textMuted: "#7a6b85",
+  /** App bar / nav labels */
+  navText: "#6e5585",
   layoutWidth: "76%",
   layoutMaxWidth: "1160px",
   cardRadius: "6px",
 
-  primary: "#0d9488",
-  primaryDark: "#0f766e",
-  primaryLight: "#14b8a6",
-  primaryDeep: "#115e59",
-  primaryMuted: "#5eead4",
-  primaryRgb: "13, 148, 136",
+  /** Deep accent derived from #CDB4DA */
+  primary: "#9d87b0",
+  primaryDark: "#8f74a3",
+  primaryLight: "#CDB4DA",
+  primaryDeep: "#7a6290",
+  primaryMuted: "#e8dff0",
+  primaryRgb: "157, 135, 176",
 
-  link: "#1e5a8a",
-  linkHover: "#2e7ab8",
-  linkRgb: "30, 90, 138",
+  link: "#5c4a6f",
+  linkHover: "#6e5585",
+  linkRgb: "92, 74, 111",
 } as const;
 
 export type SiteTheme = typeof siteTheme;
@@ -28,6 +32,7 @@ export function getThemeCssVariables(): string {
   --theme-surface: ${siteTheme.surface};
   --theme-text: ${siteTheme.text};
   --theme-text-muted: ${siteTheme.textMuted};
+  --theme-nav-text: ${siteTheme.navText};
   --layout-width: ${siteTheme.layoutWidth};
   --layout-max-width: ${siteTheme.layoutMaxWidth};
   --card-radius: ${siteTheme.cardRadius};

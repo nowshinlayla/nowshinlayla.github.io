@@ -158,7 +158,12 @@ export default function Appbar() {
       <AppBar
         component="nav"
         position="fixed"
-        sx={{ backgroundColor: "transparent" }}
+        color="transparent"
+        elevation={0}
+        sx={{
+          backgroundColor: "transparent",
+          color: "var(--theme-nav-text)",
+        }}
       >
         <Toolbar className={styles.appbar} disableGutters>
           <div className={styles.appbarContent}>
@@ -168,7 +173,7 @@ export default function Appbar() {
               edge="start"
               onClick={handleDrawerToggle}
               className={styles.menuButton}
-              sx={{ mr: 2, display: { sm: "none" }, color: "#2b2b2b" }}
+              sx={{ mr: 2, display: { sm: "none" }, color: "var(--theme-nav-text)" }}
             >
               <MenuIcon />
             </IconButton>
@@ -185,6 +190,7 @@ export default function Appbar() {
                   fontSize: { xs: "1.4rem", sm: "1.6rem" },
                   fontWeight: 700,
                   letterSpacing: "0.5px",
+                  color: "var(--theme-nav-text)",
                 }}
                 onClick={() => scrollToSection("about")}
               >
@@ -211,6 +217,7 @@ export default function Appbar() {
                   sx={{
                     fontSize: "1rem",
                     fontWeight: 600,
+                    color: "var(--theme-nav-text)",
                   }}
                 >
                   {item.name}
