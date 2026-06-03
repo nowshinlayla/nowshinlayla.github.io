@@ -1,18 +1,18 @@
 /**
  * Site accent theme — change `primary` to recolor accents (nav, icons, highlights).
+ * Link colors stay on `link` / `linkHover` (dark blue) and are not tied to `primary`.
  */
 export const siteTheme = {
   surface: "#f9fafb",
-  /** Soft plum — not pure black */
-  text: "#4a3f52",
-  textMuted: "#7a6b85",
-  /** App bar / nav labels */
-  navText: "#6e5585",
+
+  text: "#333333",
+  textMuted: "#6c757d",
+
   layoutWidth: "76%",
   layoutMaxWidth: "1160px",
   cardRadius: "6px",
 
-  /** Deep accent derived from #CDB4DA */
+  /** Nowshin lavender (deep #CDB4DA family) */
   primary: "#9d87b0",
   primaryDark: "#8f74a3",
   primaryLight: "#CDB4DA",
@@ -20,9 +20,9 @@ export const siteTheme = {
   primaryMuted: "#e8dff0",
   primaryRgb: "157, 135, 176",
 
-  link: "#5c4a6f",
-  linkHover: "#6e5585",
-  linkRgb: "92, 74, 111",
+  link: "#2e48a3",
+  linkHover: "#4d94c4",
+  linkRgb: "46, 72, 163",
 } as const;
 
 export type SiteTheme = typeof siteTheme;
@@ -32,7 +32,6 @@ export function getThemeCssVariables(): string {
   --theme-surface: ${siteTheme.surface};
   --theme-text: ${siteTheme.text};
   --theme-text-muted: ${siteTheme.textMuted};
-  --theme-nav-text: ${siteTheme.navText};
   --layout-width: ${siteTheme.layoutWidth};
   --layout-max-width: ${siteTheme.layoutMaxWidth};
   --card-radius: ${siteTheme.cardRadius};

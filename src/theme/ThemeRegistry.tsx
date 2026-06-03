@@ -29,7 +29,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           boxShadow: "none",
-          color: siteTheme.navText,
+          backgroundImage: "none",
         },
       },
     },
@@ -85,4 +85,4 @@ export default function ThemeRegistry({ children }: { children: React.ReactNode 
       </ThemeProvider>
     </CacheProvider>
   );
-} 
+}

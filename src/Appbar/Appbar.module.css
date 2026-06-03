@@ -1,15 +1,15 @@
 .appbar {
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     height: 58px;
     min-height: 58px !important;
     padding-top: 0;
     padding-bottom: 0;
     display: flex;
     justify-content: center;
-    box-shadow: 0 2px 12px rgba(var(--theme-primary-rgb), 0.08);
-    border-bottom: 1px solid rgba(var(--theme-primary-rgb), 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .logo {
-    color: var(--theme-nav-text);
+    color: var(--theme-text) !important;
     font-weight: 700 !important;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -50,8 +50,8 @@
 }
 
 .listItem {
-    color: var(--theme-nav-text);
-    opacity: 0.92;
+    color: var(--theme-text) !important;
+    opacity: 0.9;
     padding: 8px 10px !important;
     font-size: 1rem !important;
     font-weight: 600;

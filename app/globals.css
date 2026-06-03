@@ -3,13 +3,18 @@
 
 :root {
   --background: #f9fafb;
-  --foreground: #4a3f52;
+  --foreground: #333333;
   --line-height-body: 1.5;
   --line-height-snug: 1.4;
   --line-height-tight: 1.3;
 }
 
-/* Site uses a fixed light theme; do not flip text to white in dark mode. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 html,
 body {
@@ -41,3 +46,8 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
